@@ -8,12 +8,13 @@ import {createStore, applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
 import logger from 'redux-logger'
 import thunk from 'redux-thunk'
+import { photoReducer } from './reducers/photoReducer';
 
-const store = createStore(applyMiddleware(logger, thunk))
+const store = createStore(photoReducer, applyMiddleware(logger, thunk))
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider>
+    <Provider store={store} >
       <App />
     </Provider>
   </React.StrictMode>,
