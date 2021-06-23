@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+
+import { photoReducer } from "./reducers/photoReducer";
 
 function App() {
   return (
